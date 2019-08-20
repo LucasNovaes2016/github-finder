@@ -36,14 +36,14 @@ const User = ({ match }) => {
   return (
     <Fragment>
       <Link to='/' className='btn btn-light'>
-        Back To Search
+        Voltar
       </Link>
-      Hireable:{' '}
+      Empregável:{' '}
       {hireable ? (
         <i className='fas fa-check text-success' />
       ) : (
-        <i className='fas fa-times-circle text-danger' />
-      )}
+          <i className='fas fa-times-circle text-danger' />
+        )}
       <div className='card grid-2'>
         <div className='all-center'>
           <img
@@ -53,7 +53,7 @@ const User = ({ match }) => {
             style={{ width: '150px' }}
           />
           <h1>{name}</h1>
-          <p>Location: {location}</p>
+          <p>Local: {location}</p>
         </div>
         <div>
           {bio && (
@@ -63,7 +63,7 @@ const User = ({ match }) => {
             </Fragment>
           )}
           <a href={html_url} className='btn btn-dark my-1'>
-            Visit Github Profile
+            Visitar Perfil no Github
           </a>
           <ul>
             <li>
@@ -77,7 +77,7 @@ const User = ({ match }) => {
             <li>
               {company && (
                 <Fragment>
-                  <strong>Company: </strong> {company}
+                  <strong>Empresa: </strong> {company}
                 </Fragment>
               )}
             </li>
@@ -93,10 +93,10 @@ const User = ({ match }) => {
         </div>
       </div>
       <div className='card text-center'>
-        <div className='badge badge-primary'>Followers: {followers}</div>
-        <div className='badge badge-success'>Following: {following}</div>
-        <div className='badge badge-light'>Public Repos: {public_repos}</div>
-        <div className='badge badge-dark'>Public Gists: {public_gists}</div>
+        <div className='badge badge-primary'>Seguidores: {followers}</div>
+        <div className='badge badge-success'>Seguindo: {following}</div>
+        <div className='badge badge-light'>Repositórios Públicos: {public_repos}</div>
+        <div className='badge badge-dark'>Gists Públicos: {public_gists}</div>
       </div>
       <Repos repos={repos} />
     </Fragment>

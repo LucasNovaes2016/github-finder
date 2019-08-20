@@ -26,13 +26,13 @@ const Search = () => {
         <input
           type='text'
           name='text'
-          placeholder='Search Users...'
+          placeholder='Pesquisar por usuários...'
           value={text}
           onChange={onChange}
         />
         <input
           type='submit'
-          value='Search'
+          value='Pesquisar'
           className='btn btn-dark btn-block'
         />
       </form>
@@ -41,7 +41,7 @@ const Search = () => {
           className='btn btn-light btn-block'
           onClick={githubContext.clearUsers}
         >
-          Clear
+          Limpar
         </button>
       )}
     </div>
